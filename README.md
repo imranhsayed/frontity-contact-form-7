@@ -37,7 +37,7 @@ This is the beta version. Some features will be added in the final release, like
 
 ## Credits :white_flower:
 
-- Build with love :blue_heart:, using [Frontity's](https://frontity.org) [mars-theme](https://www.npmjs.com/package/@frontity/mars-theme)
+- Build with love :blue_heart:, using [Frontity's](https://frontity.org)
 
 ## Author
 
