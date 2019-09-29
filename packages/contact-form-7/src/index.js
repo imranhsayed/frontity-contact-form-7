@@ -28,7 +28,7 @@ export default {
 	actions: {
 		cf7: {
 			sendForm: ( { state } ) => async data => {
-				const res                          = await fetch( `https://orionhive.com/wp-json/contact-form-7/v1/contact-forms/${ data }/feedback` );
+				const res                          = await fetch( `https://www.orionhive.com/wp-json/contact-form-7/v1/contact-forms/${ data }/feedback` );
 				const body                         = await res.json();
 				// Populate state with the errors, or thank-you message...
 				state.cf7.forms[ data.id ].message = body.message;
