@@ -24,13 +24,6 @@
 ```
 4. `npx frontity dev` ( from project's root directory )
 5. Your site will be available at `http://localhost:3000/`
-6. Set the to true to display featured images on Home page and single post page.
-```ruby
-      "featured": {
-        "showOnList": true,
-        "showOnPost": true
-      }
-```
 
 ## More info :clipboard:
 
