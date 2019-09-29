@@ -2,7 +2,7 @@ const settings = {
   "name": "frontity-contact-form-7",
   "state": {
     "frontity": {
-      "url": "https://codeytek.com",
+      "url": "https://test.frontity.io",
       "title": "Test Frontity Blog",
       "description": "WordPress installation for Frontity development"
     }
@@ -45,7 +45,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://codeytek.com/wp-json"
+          "api": "https://test.frontity.io/wp-json"
         }
       }
     },
