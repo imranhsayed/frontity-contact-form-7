@@ -24,7 +24,7 @@ const MyForm = {
 
 	state: {
 		cf7: {
-			forms: []
+			forms: {}
 		}
 	},
 	libraries: {

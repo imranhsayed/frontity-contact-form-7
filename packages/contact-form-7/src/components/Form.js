@@ -6,10 +6,9 @@ const Form = ({ state, id, children }) => {
 	// const form = state.cf7.forms[ id ];
 
 	// Set the form id.
-	state.cf7.forms[ id ] = {  };
+	state.cf7.forms[id] = {};
 
-	// console.warn( 'state', state );
-	console.warn( 'children', children );
+	//console.warn( 'children', children );
 
 	const handleOnSubmit = () => {
 
