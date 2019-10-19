@@ -1,6 +1,6 @@
 import { connect } from "frontity";
 import cf7Form from './cf7Form';
-
+import cf7Inputs from "./cf7Inputs";
 
 
 
@@ -31,7 +31,7 @@ const MyForm = {
 	},
   libraries: {
     html2react: {
-      processors: [cf7Form ]
+      processors: [cf7Form, cf7Inputs ]
     }
   },
 
