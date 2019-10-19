@@ -3,15 +3,7 @@ import cf7Form from './cf7Form';
 
 
 
-const cf7Inputs = {
-	name: "cf7Inputs",
-	test: node => node.component === "input" && /wpcf7-form-control/.test(node.props.className),
-	process: node => {
-		//console.warn( 'cf7Input' ,node );
-		//node.component = Input;
-		return node;
-	}
-};
+
 
 const cf7HiddenInputs = {
   name: "cf7HiddenInputs",
