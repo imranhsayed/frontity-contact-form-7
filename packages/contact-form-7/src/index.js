@@ -1,5 +1,5 @@
 import { connect } from "frontity";
-import cf7Form from './cf7';
+import cf7Form from './cf7Form';
 
 
 

@@ -1,9 +1,5 @@
 import { connect } from "frontity";
-
-const Form = props => {
-  console.log(props);
-  return <div>sdfdg</div>;
-};
+import Form from "./Form";
 
 const cf7Form = {
   name: "cf7Form",
@@ -15,7 +11,7 @@ const cf7Form = {
 
     node.component = Form;
 
-    console.log("cf7Form", node);
+    console.warn("cf7Form", node);
     //node.component = Form;
     return node;
   }
