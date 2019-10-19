@@ -1,5 +1,5 @@
 import { connect } from "frontity";
-import Input from './Input';
+import Input from './../components/Input';
 
 const cf7Inputs = {
 	name: "cf7Inputs",

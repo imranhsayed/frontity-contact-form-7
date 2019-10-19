@@ -1,5 +1,5 @@
 import { connect, styled } from "frontity";
-import FormIdContext from "./FormIdContext";
+import FormIdContext from "./../context/FormIdContext";
 
 const Form = ({ state, id, children }) => {
 

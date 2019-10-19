@@ -1,5 +1,5 @@
 import { connect } from "frontity";
-import Form from "./Form";
+import Form from "./../components/Form";
 
 const cf7Form = {
 	name: "cf7Form",

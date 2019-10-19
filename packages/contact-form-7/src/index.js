@@ -1,6 +1,7 @@
 import { connect } from "frontity";
-import cf7Form from './cf7Form';
-import cf7Inputs from "./cf7Inputs";
+import cf7Form from './processors/cf7Form';
+import cf7Inputs from "./processors/cf7Inputs";
+import cf7Spans from "./processors/cf7Spans";
 
 
 const cf7HiddenInputs = {
