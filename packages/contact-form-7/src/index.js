@@ -37,9 +37,10 @@ const MyForm = {
 
   actions: {
     cf7: {
+	    changeInputValue: ( { state } ) => {
+	    	console.warn( 'changeInputVal', state );
+	    },
       sendForm: ({ state }) => async data => {
-        console.log(state);
-        return;
 
         const res = await fetch(
           `https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/41/feedback`
