@@ -3,23 +3,20 @@ import cf7Form from './cf7Form';
 import cf7Inputs from "./cf7Inputs";
 
 
-
-
 const cf7HiddenInputs = {
-  name: "cf7HiddenInputs",
-  test: node =>
-    node.component === "input" &&
-    typeof(node.parent) !== 'undefined' &&
-	node.parent.parent.component === "form",
+	name: "cf7HiddenInputs",
+	test: node =>
+		node.component === "input" &&
+		typeof ( node.parent ) !== 'undefined' &&
+		node.parent.parent.component === "form",
 	// also check class name
-  process: node => {
-	  //console.log(state);
-    console.warn("cf7HiddenInput", node);
-    //node.component = Input;
-    return node;
-  }
+	process: node => {
+		//console.log(state);
+		console.warn( "cf7HiddenInput", node );
+		//node.component = Input;
+		return node;
+	}
 };
-
 
 
 const MyForm = {
@@ -29,41 +26,41 @@ const MyForm = {
 			forms: []
 		}
 	},
-  libraries: {
-    html2react: {
-      processors: [cf7Form, cf7Inputs ]
-    }
-  },
+	libraries: {
+		html2react: {
+			processors: [cf7Form, cf7Inputs]
+		}
+	},
 
-  actions: {
-    cf7: {
-	    changeInputValue: ( { state } ) => {
-	    	console.warn( 'changeInputVal', state );
-	    },
-      sendForm: ({ state }) => async data => {
+	actions: {
+		cf7: {
+			changeInputValue: ( id, name, value ) => {
+				console.warn( 'changeInputVal', id, name, value );
+			},
+			sendForm: ( { state } ) => async data => {
 
-        const res = await fetch(
-          `https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/41/feedback`
-        );
+				const res = await fetch(
+					`https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/41/feedback`
+				);
 
-        const body = await res.json();
-        // Populate state with the errors, or thank-you message...
-        state.cf7.forms[data.id].message = body.message;
-        if (body.mail_sent) {
-          state.cf7.forms[data.id].status = "sent";
-          state.cf7.forms[data.id].message = body.message;
-        } else if (body.validation_failed) {
-          state.cf7.forms[data.id].status = "failed";
-          // Populate errors from the response so React components
-          // can see them and re-render appropriately...
-          state.cf7.forms[data.id].validationErrors = {
-            email: "The e-mail address entered is invalid."
-          };
-        }
-      }
-    }
-  }
+				const body                         = await res.json();
+				// Populate state with the errors, or thank-you message...
+				state.cf7.forms[ data.id ].message = body.message;
+				if ( body.mail_sent ) {
+					state.cf7.forms[ data.id ].status  = "sent";
+					state.cf7.forms[ data.id ].message = body.message;
+				} else if ( body.validation_failed ) {
+					state.cf7.forms[ data.id ].status = "failed";
+					// Populate errors from the response so React components
+					// can see them and re-render appropriately...
+					state.cf7.forms[ data.id ].validationErrors = {
+						email: "The e-mail address entered is invalid."
+					};
+				}
+			}
+		}
+	}
 };
 
 
-export default connect(MyForm);
+export default connect( MyForm );

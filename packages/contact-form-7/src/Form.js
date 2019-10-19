@@ -5,8 +5,14 @@ export const FormIdContext = React.createContext(null);
 
 const Form = ({ state, id, children }) => {
 
-	const form = state.cf7.forms[ id ];
+	// const form = state.cf7.forms[ id ];
 
+	// Set the form id.
+	state.cf7.forms[ id ] = {  };
+
+	// console.warn( 'state', state );
+	console.warn( 'children', children );
+	
 	const handleOnSubmit = () => {
 
 	};

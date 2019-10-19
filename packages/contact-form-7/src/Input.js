@@ -6,10 +6,11 @@ const Input = ({ state, actions, name }) => {
 
 	const id = React.useContext(FormIdContext);
 
-	console.warn( 'id', actions );
-
 	const onChange = ( event ) => {
+
 		console.warn( 'name', id, name, event.target.value );
+
+		state.cf7.forms[id][event.target.name] = event.target.value;
 		actions.cf7.changeInputValue( id, name, event.target.value );
 	};
 
