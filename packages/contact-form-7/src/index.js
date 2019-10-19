@@ -31,6 +31,12 @@ const cf7HiddenInputs = {
 
 
 const MyForm = {
+
+	state: {
+		cf7: {
+			forms: []
+		}
+	},
   libraries: {
     html2react: {
       processors: [cf7Form ]
