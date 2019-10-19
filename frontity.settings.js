@@ -19,7 +19,7 @@ const settings = {
             ],
             [
               "Nature",
-              "/category/nature/"
+              "/cf7"
             ],
             [
               "Travel",
@@ -45,12 +45,13 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://test.frontity.io/wp-json"
+          "api": "https://smitpatadiya.com/wp-json"
         }
       }
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
+    "@frontity/html2react",
+    "@frontity/contact-form-7"
   ]
 };
 
