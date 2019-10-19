@@ -2,8 +2,8 @@ import { connect } from "frontity";
 
 const Form = ({ state, id, children }) => {
 
-	// const form = state.cf7.forms[id];
-	console.warn( 'State', state );
+	const form = state.cf7.forms[id];
+	console.warn( 'State', form );
 
 
 

@@ -8,6 +8,7 @@ const cf7Form = {
   process: node => {
     const id = node.children[0].children[0].props.value;
     node.props.id = id;
+    console.warn( 'formId', id );
 
     node.component = Form;
 
