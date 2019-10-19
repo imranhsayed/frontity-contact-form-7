@@ -5,7 +5,7 @@ const cf7Inputs = {
 	name: "cf7Inputs",
 	test: node => node.component === "input" && /wpcf7-form-control/.test(node.props.className),
 	process: node => {
-		//console.log( node );
+		
 		node.props.inputName = node.props.name;
 		//console.warn( 'cf7Input' ,node );
 		node.component = Input;

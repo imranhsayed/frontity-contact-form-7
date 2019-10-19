@@ -29,7 +29,7 @@ const MyForm = {
 	},
 	libraries: {
 		html2react: {
-			processors: [cf7Form, cf7Inputs, cf7Spans]
+			processors: [cf7Form, cf7Inputs]
 		}
 	},
 
