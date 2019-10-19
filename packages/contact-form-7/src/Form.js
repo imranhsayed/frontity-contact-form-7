@@ -1,7 +1,5 @@
-import React from 'react';
 import { connect, styled } from "frontity";
-
-export const FormIdContext = React.createContext(null);
+import FormIdContext from "./FormIdContext";
 
 const Form = ({ state, id, children }) => {
 

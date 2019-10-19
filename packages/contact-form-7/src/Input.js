@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormIdContext } from "./Form";
+import FormIdContext from "./FormIdContext";
 import { connect } from "frontity";
 
 const Input = ({ state, actions, name }) => {

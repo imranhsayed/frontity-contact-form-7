@@ -28,7 +28,7 @@ const MyForm = {
 	},
 	libraries: {
 		html2react: {
-			processors: [cf7Form, cf7Inputs]
+			processors: [cf7Form, cf7Inputs, cf7Spans]
 		}
 	},
 
