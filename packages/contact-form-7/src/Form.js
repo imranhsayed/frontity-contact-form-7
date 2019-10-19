@@ -12,7 +12,7 @@ const Form = ({ state, id, children }) => {
 
 	// console.warn( 'state', state );
 	console.warn( 'children', children );
-	
+
 	const handleOnSubmit = () => {
 
 	};
