@@ -8,7 +8,7 @@ const cf7Inputs = {
 		//console.warn( 'cf7Input' ,node );
 
 		node.props.inputProps = {
-			ariaInvalid: node.props["aria-invalid"],
+			ariaInvalid: ( 'undefined' === typeof(node.props["aria-invalid"]) ) ? '' : node.props["aria-invalid"],
 			ariaRequired: node.props["aria-required"],
 			className: node.props.className,
 			name: node.props.name,

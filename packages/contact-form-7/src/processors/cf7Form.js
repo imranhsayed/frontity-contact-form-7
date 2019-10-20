@@ -10,7 +10,7 @@ const cf7Form = {
 		node.props.id  = node.children[ 0 ].children[ 0 ].props.value;
 		node.component = Form;
 
-		console.warn( "cf7Form", node );
+		//console.warn( "cf7Form", node );
 		//node.component = Form;
 		return node;
 	}

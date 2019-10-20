@@ -8,15 +8,24 @@ const Input = ({ state, actions, inputProps }) => {
 
 	useEffect( () => {
 		console.warn( state.cf7.forms[id] );
-		state.cf7.forms[id].inputVals[inputProps.name] = '';
+		if( 'undefined' === typeof(state.cf7.forms[id]['inputVals']) ){
+			state.cf7.forms[id]["inputVals"] = {};
+			console.log("3nd", inputProps);
+		} else{
+			console.log("2nd", inputProps);
+			state.cf7.forms[id]['inputVals'][inputProps.name] = '';
+		}
+
+		//state.cf7.forms[id]['inputVals'] = {};
+		//state.cf7.forms[id].inputVals.[inputProps.name] = '';
 	} );
 
 	const onChange = ( event ) => {
 
-		console.warn( 'name', id, name, event.target.value );
+		console.warn("form", state.cf7.forms[id]);
 
 		// state.cf7.forms[id][event.target.name] = event.target.value;
-		actions.cf7.changeInputValue( id, name, event.target.value );
+		//actions.cf7.changeInputValue( id, name, event.target.value );
 	};
 
 	return (
@@ -27,7 +36,7 @@ const Input = ({ state, actions, inputProps }) => {
 			aria-required={inputProps.ariaRequired}
 			size={inputProps.size}
 			type={inputProps.type}
-			value={state.cf7.forms[id].inputVals[inputProps.name]}
+			value={''}
 			onChange={onChange}
 		/>
 );

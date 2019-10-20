@@ -9,7 +9,7 @@ const Form = ({ state, id, children }) => {
 	state.cf7.forms[ id ] = {  };
 
 	// console.warn( 'state', state );
-	console.warn( 'children', children );
+	//console.warn( 'children', children );
 
 	const handleOnSubmit = ( event ) => {
 		event.preventDefault();
