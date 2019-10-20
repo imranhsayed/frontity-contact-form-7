@@ -8,7 +8,7 @@ const Input = ({ state, actions, inputProps }) => {
 
 	useEffect( () => {
 		console.warn( state.cf7.forms[id] );
-		state.cf7.forms[id].inputVals[inputProps.name] = '';
+		// state.cf7.forms[id].inputVals[inputProps.name] = '';
 	} );
 
 	const onChange = ( event ) => {
@@ -27,7 +27,7 @@ const Input = ({ state, actions, inputProps }) => {
 			aria-required={inputProps.ariaRequired}
 			size={inputProps.size}
 			type={inputProps.type}
-			value={state.cf7.forms[id].inputVals[inputProps.name]}
+			value={''}
 			onChange={onChange}
 		/>
 );
