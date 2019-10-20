@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FormIdContext from "./../context/FormIdContext";
 import { connect } from "frontity";
 
-const Input = ({ state, actions, name }) => {
+const Input = ({ state, actions, inputProps }) => {
 
 	const id = React.useContext(FormIdContext);
+
+	useEffect( () => {
+		console.warn( state.cf7.forms[id] );
+		state.cf7.forms[id].inputVals[inputProps.name] = '';
+	} );
 
 	const onChange = ( event ) => {
 
@@ -15,7 +20,16 @@ const Input = ({ state, actions, name }) => {
 	};
 
 	return (
-		<input onChange={onChange}/>
+		<input
+			name={inputProps.name}
+			className={inputProps.className}
+			aria-invalid={inputProps.ariaInvalid}
+			aria-required={inputProps.ariaRequired}
+			size={inputProps.size}
+			type={inputProps.type}
+			value={state.cf7.forms[id].inputVals[inputProps.name]}
+			onChange={onChange}
+		/>
 );
 };
 
