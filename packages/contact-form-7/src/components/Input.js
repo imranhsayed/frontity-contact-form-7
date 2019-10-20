@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import FormIdContext from "./../context/FormIdContext";
+import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
 const Input = ({ state, actions, inputProps }) => {
 
 	const id = React.useContext(FormIdContext);
-	const inputName = inputProps.name.replace(/\-/g, '_');
+	const inputName = inputProps.name;
 
 	useEffect( () => {
 		

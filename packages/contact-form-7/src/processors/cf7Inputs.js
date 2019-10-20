@@ -1,5 +1,5 @@
 import { connect } from "frontity";
-import Input from './../components/Input';
+import Input from '../components/Input';
 
 const cf7Inputs = {
 	name: "cf7Inputs",
@@ -14,7 +14,7 @@ const cf7Inputs = {
 		const size = ( 'undefined' === typeof ( node.props.size ) ) ? '' : node.props.size;
 		const type = ( 'undefined' === typeof ( node.props.type ) ) ? '' : node.props.type;
 		const value = ( 'undefined' === typeof ( node.props.value ) ) ? '' : node.props.value;	
-		
+
 		node.props.inputProps = {
 			ariaInvalid: ariaInvalid,
 			ariaRequired: ariaRequired,

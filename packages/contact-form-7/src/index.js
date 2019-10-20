@@ -2,22 +2,9 @@ import { connect } from "frontity";
 import cf7Form from './processors/cf7Form';
 import cf7Inputs from "./processors/cf7Inputs";
 import cf7Spans from "./processors/cf7Spans";
+import cf7HiddenInputs from "./processors/cf7HiddenInputs";
 
 
-const cf7HiddenInputs = {
-	name: "cf7HiddenInputs",
-	test: node =>
-		node.component === "input" &&
-		typeof ( node.parent ) !== 'undefined' &&
-		node.parent.parent.component === "form",
-	// also check class name
-	process: node => {
-		//console.log(state);
-		console.warn( "cf7HiddenInput", node );
-		//node.component = Input;
-		return node;
-	}
-};
 
 
 const MyForm = {
@@ -29,7 +16,7 @@ const MyForm = {
 	},
 	libraries: {
 		html2react: {
-			processors: [cf7Form, cf7Inputs]
+			processors: [cf7Form, cf7Inputs, cf7HiddenInputs]
 		}
 	},
 
