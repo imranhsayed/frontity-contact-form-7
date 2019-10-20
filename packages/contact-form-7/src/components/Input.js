@@ -5,41 +5,42 @@ import { connect } from "frontity";
 const Input = ({ state, actions, inputProps }) => {
 
 	const id = React.useContext(FormIdContext);
+	const inputName = inputProps.name.replace(/\-/g, '_');
 
 	useEffect( () => {
-		console.warn( state.cf7.forms[id] );
-		if( 'undefined' === typeof(state.cf7.forms[id]['inputVals']) ){
-			state.cf7.forms[id]["inputVals"] = {};
-			console.log("3nd", inputProps);
-		} else{
-			console.log("2nd", inputProps);
-			state.cf7.forms[id]['inputVals'][inputProps.name] = '';
-		}
+		
+		if ( 'undefined' === typeof ( state.cf7.forms[id].inputVals ) ) {
+			
+			state.cf7.forms[id].inputVals = ( '' !== inputName ) ? { [inputName]: '' } : {};
 
-		//state.cf7.forms[id]['inputVals'] = {};
-		//state.cf7.forms[id].inputVals.[inputProps.name] = '';
-	} );
+		} else if( '' !== inputName ){
+
+			state.cf7.forms[id].inputVals[inputName] = '';
+
+		}
+		
+	}, [] );
 
 	const onChange = ( event ) => {
 
-		console.warn("form", state.cf7.forms[id]);
+		state.cf7.forms[id].inputVals[inputName] = event.target.value;
 
-		// state.cf7.forms[id][event.target.name] = event.target.value;
-		//actions.cf7.changeInputValue( id, name, event.target.value );
 	};
+	
+	const inputVal = ( 'undefined' === typeof(state.cf7.forms[id].inputVals) ) ? '' : state.cf7.forms[id].inputVals[inputName];
 
 	return (
-		<input
-			name={inputProps.name}
-			className={inputProps.className}
-			aria-invalid={inputProps.ariaInvalid}
-			aria-required={inputProps.ariaRequired}
-			size={inputProps.size}
-			type={inputProps.type}
-			value={''}
-			onChange={onChange}
-		/>
-);
+    <input
+      name={inputProps.name}
+      className={inputProps.className}
+      aria-invalid={inputProps.ariaInvalid}
+      aria-required={inputProps.ariaRequired}
+      size={inputProps.size}
+      type={inputProps.type}
+      value={inputVal}
+      onChange={onChange}
+    />
+  );
 };
 
 export default connect( Input );

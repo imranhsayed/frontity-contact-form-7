@@ -7,7 +7,7 @@ const Span = ({ className, state, children }) => {
 	const name = className.split(" ")[1];
 	// Get id from context
 	const id = React.useContext( FormIdContext );
-	console.warn( 'id', id );
+	
 	// Get error from the state.
 	// const error = state.cf7.forms[id].validationErrors[name];
 	const error = '';
