@@ -1,13 +1,15 @@
+import { useEffect } from 'react';
 import { connect, styled } from "frontity";
-import { useEffect } from "react";
 import FormIdContext from "./../context/FormIdContext";
 
-const Form = ({ state, id, children }) => {
+const Form = ({ state, actions, id, children }) => {
 
-	state.cf7.forms[id] = {};
+	actions.cf7.initForm( id );
 
 	const handleOnSubmit = ( event ) => {
 		event.preventDefault();
+
+		actions.cf7.sendForm( id );
 	};
 
 	return (

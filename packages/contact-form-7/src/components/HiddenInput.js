@@ -8,19 +8,19 @@ const Input = ({ state, actions, inputProps }) => {
 	const inputName = inputProps.name;
 
 	useEffect( () => {
-		
-		if ( 'undefined' === typeof ( state.cf7.forms[id].inputVals ) ) {
-			
-			state.cf7.forms[id].inputVals = ( '' !== inputName ) ? { [inputName]: inputProps.value } : {};
 
-		} else if( '' !== inputName ){
+		// if ( 'undefined' === typeof ( state.cf7.forms[id].inputVals ) ) {
+		//
+		// 	state.cf7.forms[id].inputVals = ( '' !== inputName ) ? { [inputName]: inputProps.value } : {};
+		//
+		// } else if( '' !== inputName ){
+		//
+		// 	state.cf7.forms[id].inputVals[inputName] = inputProps.value;
+		//
+		// }
 
-			state.cf7.forms[id].inputVals[inputName] = inputProps.value;
-
-		}
-		
 	}, [] );
-	
+
 	return (
 		<>
 		</>

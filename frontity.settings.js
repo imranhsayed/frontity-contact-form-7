@@ -18,7 +18,7 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
+              "Contact Form 7",
               "/cf7"
             ],
             [

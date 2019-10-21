@@ -7,37 +7,26 @@ const Input = ({ state, actions, inputProps }) => {
 	const id = React.useContext(FormIdContext);
 	const inputName = inputProps.name;
 
-	useEffect( () => {
-		
-		if ( 'undefined' === typeof ( state.cf7.forms[id].inputVals ) ) {
-			
-			state.cf7.forms[id].inputVals = ( '' !== inputName ) ? { [inputName]: '' } : {};
-
-		} else if( '' !== inputName ){
-
-			state.cf7.forms[id].inputVals[inputName] = '';
-
-		}
-		
-	}, [] );
+	console.warn( 'inpt', inputProps );
 
 	const onChange = ( event ) => {
 
-		state.cf7.forms[id].inputVals[inputName] = event.target.value;
+		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );
+		console.warn( 'state', state );
 
 	};
-	
-	const inputVal = ( 'undefined' === typeof(state.cf7.forms[id].inputVals) ) ? '' : state.cf7.forms[id].inputVals[inputName];
+
+	// const inputVal = ( 'undefined' === typeof(state.cf7.forms[id].inputVals) ) ? '' : state.cf7.forms[id].inputVals[inputName];
 
 	return (
     <input
-      name={inputProps.name}
+      name={ inputProps.name }
       className={inputProps.className}
       aria-invalid={inputProps.ariaInvalid}
       aria-required={inputProps.ariaRequired}
       size={inputProps.size}
       type={inputProps.type}
-      value={inputVal}
+      value={ state.cf7.forms[id].inputVals[inputName] }
       onChange={onChange}
     />
   );

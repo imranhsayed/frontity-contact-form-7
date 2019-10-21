@@ -1,4 +1,3 @@
-import { connect } from "frontity";
 import Form from "./../components/Form";
 
 const cf7Form = {
@@ -7,13 +6,13 @@ const cf7Form = {
 		node.component === "form" && node.props.className === "wpcf7-form",
 	process: node => {
 
+		// Check for "_wpcf7".
 		node.props.id  = node.children[ 0 ].children[ 0 ].props.value;
 		node.component = Form;
 
 		//console.warn( "cf7Form", node );
-		//node.component = Form;
 		return node;
 	}
 };
 
-export default connect( cf7Form );
+export default cf7Form;

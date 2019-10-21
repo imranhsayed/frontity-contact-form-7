@@ -22,26 +22,42 @@ const MyForm = {
 
 	actions: {
 		cf7: {
-			changeInputValue: ( id, name, value ) => {
-				console.warn( 'changeInputVal', id, name, value );
-			},
-			sendForm: ( { state } ) => async data => {
+			initForm: ( { state } ) => ( id ) => {
 
-				const res = await fetch(
-					`https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/41/feedback`
+				if ( ! state.cf7.forms[id] ) {
+					state.cf7.forms[id] = { inputVals: {} };
+				}
+			},
+			initInput: ( { state } ) => ( { id, inputName } ) => {
+
+				console.warn( 'cf7', state.cf7 );
+
+					state.cf7.forms[id].inputVals = ( '' !== inputName ) ? { [inputName]: '' } : {};
+			},
+			changeInputValue: ( { state } ) => ( { id, inputName, value } ) => {
+				state.cf7.forms[id].inputVals[inputName] = value;
+			},
+			sendForm: ( { state } ) => async id => {
+
+				const mydata = {
+
+				};
+				const res = await postData(
+					`https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/41/feedback`,
+					mydata
 				);
 
-				const body                         = await res.json();
+				const body  = await res.json();
 				// Populate state with the errors, or thank-you message...
-				state.cf7.forms[ data.id ].message = body.message;
+				state.cf7.forms[ id ].message = body.message;
 				if ( body.mail_sent ) {
-					state.cf7.forms[ data.id ].status  = "sent";
-					state.cf7.forms[ data.id ].message = body.message;
+					state.cf7.forms[ id ].status  = "sent";
+					state.cf7.forms[ id ].message = body.message;
 				} else if ( body.validation_failed ) {
-					state.cf7.forms[ data.id ].status = "failed";
+					state.cf7.forms[ id ].status = "failed";
 					// Populate errors from the response so React components
 					// can see them and re-render appropriately...
-					state.cf7.forms[ data.id ].validationErrors = {
+					state.cf7.forms[ id ].validationErrors = {
 						email: "The e-mail address entered is invalid."
 					};
 				}
