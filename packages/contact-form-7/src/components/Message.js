@@ -7,13 +7,12 @@ const Message = ({ state }) => {
 	const id = React.useContext(FormIdContext);
 	const responseInfo = state.cf7.forms[ id ];
 
-	console.warn( 'state', state );
-
 	const getMessage = () => {
+		console.warn( 'state', state );
 		if ( 'sent' === responseInfo.status ) {
 			return <SuccessMessage>{ responseInfo.message }</SuccessMessage>
-		} else if ( 'sent' === responseInfo.status ) {
-			return <ErrorMessage>{ responseInfo.validationErrors }</ErrorMessage>
+		} else if ( 'failed' === responseInfo.status ) {
+			return <ErrorMessage>{ responseInfo.validationErrors.email }</ErrorMessage>
 		} else {
 			return '';
 		}
@@ -31,8 +30,8 @@ const SuccessMessage = styled.div`
 
 const ErrorMessage = styled.div`
 	color: #ff2c18;
-    background-color: #d9f0d1;
-    border-color: #c9ebbe;
+    background-color: #ffccd7;
+    border-color: #ffb8c8;
     padding: 0.75rem 1.25rem;
 `;
 

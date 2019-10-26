@@ -64,12 +64,12 @@ const MyForm = {
 				 * Populate state with the errors, or thank-you message...
 				 */
 
-				if ( body.mail_sent ) {
+				if ( 'mail_sent' === body.status ) {
 
 					state.cf7.forms[ id ].status  = "sent";
 					state.cf7.forms[ id ].message = body.message;
 
-				} else if ( body.validation_failed ) {
+				} else if ( 'validation_failed' === body.status ) {
 
 					state.cf7.forms[ id ].status = "failed";
 
