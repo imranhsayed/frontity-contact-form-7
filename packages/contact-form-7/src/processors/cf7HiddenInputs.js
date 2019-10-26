@@ -13,6 +13,8 @@ const cf7HiddenInputs = {
 			name: name,
 			value: value
 		};
+		
+		console.warn( node.props );
 
         node.component = HiddenInput;
 		return node;

@@ -37,24 +37,29 @@ const MyForm = {
 			changeInputValue: ( { state } ) => ( { id, inputName, value } ) => {
 				state.cf7.forms[id].inputVals[inputName] = value;
 			},
+			addHiddenInputs: ( { state } ) => ( { id, inputName, value } ) => {
+				state.cf7.forms[id].inputVals[inputName] = value;
+			},
 			sendForm: ( { state } ) => async id => {
 
+				const myData = state.cf7.forms[id].inputVals;
 
-				const mydata = state.cf7.forms[id].inputVals;
-				const url = `https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/${id}/feedback`;
+				let formData = new FormData();
+
+				Object.keys( myData  ).forEach( ( key ) => { 
+					formData.append( key, myData[ key ] ) ;
+				});
+
+				const url = `https://smitpatadiya.com/wp-json/contact-form-7/v1/contact-forms/${id}/feedback`;
 
 				const res = await fetch( url, {
 					method: 'POST',
-					body: JSON.stringify(mydata),
-					headers: {
-						'Content-Type': 'application/json'
-					}
+					body: formData
 				} );
 				const json = await res.json();
 
 				console.log(json);
 				return;
-
 
 
 				const body  = await res.json();

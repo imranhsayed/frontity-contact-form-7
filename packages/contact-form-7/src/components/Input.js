@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
@@ -7,16 +7,13 @@ const Input = ({ state, actions, inputProps }) => {
 	const id = React.useContext(FormIdContext);
 	const inputName = inputProps.name;
 
-	console.warn( 'inpt', inputProps );
-
 	const onChange = ( event ) => {
 
 		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );
-		console.warn( 'state', state );
+		console.warn( 'state', event.target.value );
+
 
 	};
-
-	// const inputVal = ( 'undefined' === typeof(state.cf7.forms[id].inputVals) ) ? '' : state.cf7.forms[id].inputVals[inputName];
 
 	return (
     <input
