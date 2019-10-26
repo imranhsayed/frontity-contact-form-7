@@ -62,7 +62,6 @@ const MyForm = {
 				/**
 				 * Populate state with the errors, or thank-you message...
 				 */
-				state.cf7.forms[ id ].message = body.message;
 
 				if ( body.mail_sent ) {
 
@@ -80,7 +79,7 @@ const MyForm = {
 					state.cf7.forms[ id ].validationErrors = {
 						email: "The e-mail address entered is invalid."
 					};
-					
+
 				}
 			}
 		}
