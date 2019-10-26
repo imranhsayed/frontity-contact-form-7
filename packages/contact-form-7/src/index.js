@@ -22,28 +22,29 @@ const MyForm = {
 
 	actions: {
 		cf7: {
+
 			initForm: ( { state } ) => ( id ) => {
 
 				if ( ! state.cf7.forms[id] ) {
 					state.cf7.forms[id] = { inputVals: {} };
 				}
 			},
+
 			initInput: ( { state } ) => ( { id, inputName } ) => {
-
-				console.warn( 'cf7', state.cf7 );
-
 					state.cf7.forms[id].inputVals = ( '' !== inputName ) ? { [inputName]: '' } : {};
 			},
+
 			changeInputValue: ( { state } ) => ( { id, inputName, value } ) => {
 				state.cf7.forms[id].inputVals[inputName] = value;
 			},
+
 			addHiddenInputs: ( { state } ) => ( { id, inputName, value } ) => {
 				state.cf7.forms[id].inputVals[inputName] = value;
 			},
+
 			sendForm: ( { state } ) => async id => {
 
 				const myData = state.cf7.forms[id].inputVals;
-
 				let formData = new FormData();
 
 				Object.keys( myData  ).forEach( ( key ) => { 
@@ -58,20 +59,29 @@ const MyForm = {
 				} );
 				const body = await res.json();
 
-				// Populate state with the errors, or thank-you message...
+				/**
+				 * Populate state with the errors, or thank-you message...
+				 */
 				state.cf7.forms[ id ].message = body.message;
 
-				// if ( body.mail_sent ) {
-				// 	state.cf7.forms[ id ].status  = "sent";
-				// 	state.cf7.forms[ id ].message = body.message;
-				// } else if ( body.validation_failed ) {
-				// 	state.cf7.forms[ id ].status = "failed";
-				// 	// Populate errors from the response so React components
-				// 	// can see them and re-render appropriately...
-				// 	state.cf7.forms[ id ].validationErrors = {
-				// 		email: "The e-mail address entered is invalid."
-				// 	};
-				// }
+				if ( body.mail_sent ) {
+
+					state.cf7.forms[ id ].status  = "sent";
+					state.cf7.forms[ id ].message = body.message;
+
+				} else if ( body.validation_failed ) {
+
+					state.cf7.forms[ id ].status = "failed";
+
+					/**
+					 * Populate errors from the response so React components
+					 * can see them and re-render appropriately
+					 */
+					state.cf7.forms[ id ].validationErrors = {
+						email: "The e-mail address entered is invalid."
+					};
+					
+				}
 			}
 		}
 	}
