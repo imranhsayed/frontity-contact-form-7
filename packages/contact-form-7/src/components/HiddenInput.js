@@ -8,7 +8,7 @@ const HiddenInputs = ({ state, actions, inputProps }) => {
 	const inputName = inputProps.name;
 	const inputValue = inputProps.value;
 
-	actions.cf7.addHiddenInputs( { id, inputName, value: inputValue } );
+	actions.cf7.addHiddenInputs( { id, inputName, inputValue } );
 
 	return (
 		<div>.</div>

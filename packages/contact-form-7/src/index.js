@@ -10,6 +10,7 @@ const MyForm = {
 			forms: {}
 		}
 	},
+
 	libraries: {
 		html2react: {
 			processors: [cf7Form, cf7Inputs, cf7HiddenInputs]
