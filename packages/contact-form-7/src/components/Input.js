@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
@@ -11,7 +11,6 @@ const Input = ({ state, actions, inputProps }) => {
 
 		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );
 		console.warn( 'state', event.target.value );
-
 
 	};
 

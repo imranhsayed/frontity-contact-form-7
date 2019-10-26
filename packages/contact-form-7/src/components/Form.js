@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { connect, styled } from "frontity";
 import FormIdContext from "./../context/FormIdContext";
+import Message from "./Message";
 
 const Form = ({ state, actions, id, children }) => {
 
@@ -17,6 +17,7 @@ const Form = ({ state, actions, id, children }) => {
 			<FormElement onSubmit={ handleOnSubmit }>
 				{children}
 			</FormElement>
+			<Message/>
 		</FormIdContext.Provider>
 	)
 };
