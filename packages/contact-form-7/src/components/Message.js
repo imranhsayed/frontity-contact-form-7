@@ -7,13 +7,19 @@ const Message = ({ state }) => {
 	const id = React.useContext(FormIdContext);
 	const responseInfo = state.cf7.forms[ id ];
 
-	return (
-		'sent' === responseInfo.status ? (
-			<SuccessMessage>{ responseInfo.message }</SuccessMessage>
-		) : (
-			<ErrorMessage>{ responseInfo.validationErrors }</ErrorMessage>
-		)
-	)
+	console.warn( 'state', state );
+
+	const getMessage = () => {
+		if ( 'sent' === responseInfo.status ) {
+			return <SuccessMessage>{ responseInfo.message }</SuccessMessage>
+		} else if ( 'sent' === responseInfo.status ) {
+			return <ErrorMessage>{ responseInfo.validationErrors }</ErrorMessage>
+		} else {
+			return '';
+		}
+	};
+
+	return getMessage();
 };
 
 const SuccessMessage = styled.div`

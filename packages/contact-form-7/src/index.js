@@ -58,6 +58,7 @@ const MyForm = {
 					body: formData
 				} );
 				const body = await res.json();
+				console.warn( 'body', body );
 
 				/**
 				 * Populate state with the errors, or thank-you message...
