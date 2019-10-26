@@ -39,15 +39,26 @@ const MyForm = {
 			},
 			sendForm: ( { state } ) => async id => {
 
-				const mydata = {
 
-				};
-				const res = await postData(
-					`https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/41/feedback`,
-					mydata
-				);
+				const mydata = state.cf7.forms[id].inputVals;
+				const url = `https://smitpatadiya.com//wp-json/contact-form-7/v1/contact-forms/${id}/feedback`;
+
+				const res = await fetch( url, {
+					method: 'POST',
+					body: JSON.stringify(mydata),
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				} );
+				const json = await res.json();
+
+				console.log(json);
+				return;
+
+
 
 				const body  = await res.json();
+
 				// Populate state with the errors, or thank-you message...
 				state.cf7.forms[ id ].message = body.message;
 				if ( body.mail_sent ) {
