@@ -1,6 +1,7 @@
 import { connect } from "frontity";
 import cf7Form from './processors/cf7Form';
 import cf7Inputs from "./processors/cf7Inputs";
+import cf7Textarea from "./processors/cf7Textarea";
 import cf7HiddenInputs from "./processors/cf7HiddenInputs";
 
 const MyForm = {
@@ -13,7 +14,7 @@ const MyForm = {
 
 	libraries: {
 		html2react: {
-			processors: [cf7Form, cf7Inputs, cf7HiddenInputs]
+			processors: [cf7Form, cf7Inputs, cf7HiddenInputs, cf7Textarea]
 		}
 	},
 
