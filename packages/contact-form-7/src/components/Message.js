@@ -8,7 +8,7 @@ const Message = ({ state }) => {
 	const responseInfo = state.cf7.forms[ id ];
 
 	const getMessage = () => {
-		console.warn( 'state', state );
+		//console.warn( 'state', state );
 		if ( 'sent' === responseInfo.status ) {
 			return <SuccessMessage>{ responseInfo.message }</SuccessMessage>
 		} else if ( 'failed' === responseInfo.status ) {

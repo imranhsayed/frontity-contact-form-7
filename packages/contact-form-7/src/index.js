@@ -101,7 +101,7 @@ const MyForm = {
 					state.cf7.forms[ id ].message = body.message;
 
 					// Once the email is sent, clear the form fields.
-					console.warn( 'sdsd', state.cf7.forms[ id ].inputVals );
+					//console.warn( 'sdsd', state.cf7.forms[ id ].inputVals );
 					state.cf7.forms[ id ].inputVals = {};
 
 				} else if ( 'validation_failed' === body.status ) {

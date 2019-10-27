@@ -10,7 +10,7 @@ const Input = ({ state, actions, inputProps }) => {
 	const onChange = ( event ) => {
 
 		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );
-		console.warn( 'state', event.target.value );
+		//console.warn( 'state', event.target.value );
 
 	};
 

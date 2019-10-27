@@ -2,7 +2,7 @@ import { connect, styled } from "frontity";
 import FormIdContext from "./../context/FormIdContext";
 import Message from "./Message";
 
-const Form = ({ state, actions, id, children }) => {
+const Form = ({ state, actions, id, children, className, method }) => {
 
 	actions.cf7.initForm( id );
 
@@ -14,7 +14,7 @@ const Form = ({ state, actions, id, children }) => {
 
 	return (
 		<FormIdContext.Provider value={ id }>
-			<FormElement onSubmit={ handleOnSubmit }>
+			<FormElement id={ id } method={ method } onSubmit={ handleOnSubmit } className={ className }>
 				{children}
 			</FormElement>
 			<Message/>
