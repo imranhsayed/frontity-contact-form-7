@@ -7,14 +7,15 @@ const Form = ({ state, actions, id, children, className, method }) => {
 	actions.cf7.initForm( id );
 
 	const handleOnSubmit = ( event ) => {
+		
 		event.preventDefault();
-
 		actions.cf7.sendForm( id );
+		
 	};
 
 	return (
 		<FormIdContext.Provider value={ id }>
-			<FormElement id={ id } method={ method } onSubmit={ handleOnSubmit } className={ className }>
+			<FormElement method={ method } onSubmit={ handleOnSubmit } className={ className }>
 				{children}
 			</FormElement>
 			<Message/>

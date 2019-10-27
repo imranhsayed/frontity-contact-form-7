@@ -13,7 +13,8 @@ const cf7Inputs = {
 		const size = ( 'undefined' === typeof ( node.props.size ) ) ? '' : node.props.size;
 		const type = ( 'undefined' === typeof ( node.props.type ) ) ? '' : node.props.type;
 		const value = ( 'undefined' === typeof ( node.props.value ) ) ? '' : node.props.value;
-
+		const placeholder = ( 'undefined' === typeof ( node.props.placeholder ) ) ? '' : node.props.placeholder;
+		
 		node.props.inputProps = {
 			ariaInvalid: ariaInvalid,
 			ariaRequired: ariaRequired,
@@ -21,7 +22,8 @@ const cf7Inputs = {
 			name: name,
 			size: size,
 			type: type,
-			value: value
+			value: value,
+			placeholder: placeholder
 		};
 
 		node.component = Input;
