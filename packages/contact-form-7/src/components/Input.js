@@ -8,10 +8,14 @@ const Input = ({ state, actions, inputProps }) => {
   const inputName = inputProps.name;
   const placeholder = inputProps.placeholder;
 
+  if ( 'undefined' === typeof( state.cf7.forms[id].inputVals[inputName] ) ) {
+    actions.cf7.changeInputValue( { id, inputName, value: inputProps.value } );
+  }
+
 	const onChange = ( event ) => {
 
 		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );
-    
+
 	};
 
 	return (

@@ -7,8 +7,8 @@ const Select = ({ state, actions, inputProps }) => {
   const id = React.useContext(FormIdContext);
   const inputName = inputProps.name;
 
-  if ( 'undefined' === typeof( state.cf7.forms[id].inputVals[inputName] ) ) {
-    state.cf7.forms[id].inputVals[inputName] = inputProps.value;
+  if ('undefined' === typeof (state.cf7.forms[id].inputVals[inputName])) {
+    actions.cf7.changeInputValue({ id, inputName, value: inputProps.value });
   }
 
   const inputVal = state.cf7.forms[id].inputVals[inputName];
