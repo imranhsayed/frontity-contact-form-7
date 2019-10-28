@@ -6,8 +6,6 @@ const cf7Textarea = {
 	test: node => node.component === "textarea" && /wpcf7-form-control/.test(node.props.className),
 	process: node => {
 
-		console.log(node.props);
-
 		const ariaInvalid = ( 'undefined' === typeof( node.props['aria-invalid'] ) ) ? '' : node.props['aria-invalid'];
 		const ariaRequired = ( 'undefined' === typeof( node.props['aria-required'] ) ) ? '' : node.props['aria-required'];
 		const className = ( 'undefined' === typeof ( node.props.className ) ) ? '' : node.props.className;

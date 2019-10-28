@@ -15,7 +15,7 @@ const Textarea = ({ state, actions, inputProps }) => {
 	};
 
 	return (
-    <textarea
+    <textareaa
       name={ inputProps.name }
       className={ inputProps.className }
       aria-invalid={ inputProps.ariaInvalid }
