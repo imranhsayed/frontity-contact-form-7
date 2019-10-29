@@ -85,7 +85,7 @@ const MyForm = {
 				} );
 
 				// CF7 REST API URL.
-				const url = `https://smitpatadiya.com/wp-json/contact-form-7/v1/contact-forms/${ id }/feedback`;
+				const url = `${state.source.api}/contact-form-7/v1/contact-forms/${ id }/feedback`;
 
 				// Post Request.
 				const res  = await fetch( url, {
