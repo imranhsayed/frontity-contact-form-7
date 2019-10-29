@@ -118,7 +118,7 @@ const MyForm = {
 					 * can see them and re-render appropriately
 					 */
 					state.cf7.forms[ id ].validationErrors = {
-						email: "The e-mail address entered is invalid."
+						email: "Please enter the required fields correctly"
 					};
 
 				}
