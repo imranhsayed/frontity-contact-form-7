@@ -12,6 +12,7 @@ import { connect } from "frontity";
  */
 const Input = ( { state, actions, inputProps } ) => {
 
+	// Context is used so that we can pass the form id to different components.
 	const id          = useContext( FormIdContext );
 	const inputName   = inputProps.name;
 	const placeholder = inputProps.placeholder;

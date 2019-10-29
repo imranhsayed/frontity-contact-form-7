@@ -22,7 +22,7 @@ const HiddenInputs = ( { state, actions, inputProps } ) => {
 	return (
 		<div>Hidden</div>
 	);
-	
+
 };
 
 export default connect( HiddenInputs );

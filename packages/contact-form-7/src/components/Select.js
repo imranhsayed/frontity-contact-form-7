@@ -2,6 +2,15 @@ import React from 'react';
 import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
+/**
+ * Select Component.
+ *
+ * @param {Object} state Frontity state.
+ * @param {Object} actions Actions.
+ * @param {Object} inputProps Input props.
+ *
+ * @return {*}
+ */
 const Select = ( { state, actions, inputProps } ) => {
 
 	const id        = React.useContext( FormIdContext );
@@ -12,8 +21,12 @@ const Select = ( { state, actions, inputProps } ) => {
 	}
 
 	const inputVal = state.cf7.forms[ id ].inputVals[ inputName ];
-	console.warn( 'inputValSelect', inputVal );
 
+	/**
+	 * Select onChange event handler.
+	 *
+	 * @param {Object} event Event.
+	 */
 	const onChange = ( event ) => {
 
 		//[...event.target.options].filter(({ selected }) => selected).map(({ value }) => value)
@@ -34,6 +47,7 @@ const Select = ( { state, actions, inputProps } ) => {
 			) ) }
 		</select>
 	);
+	
 };
 
 export default connect( Select );
