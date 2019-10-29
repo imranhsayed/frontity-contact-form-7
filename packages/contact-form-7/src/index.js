@@ -94,7 +94,9 @@ const MyForm = {
 				} );
 				const body = await res.json();
 
+				// Clear previous message.
 				state.cf7.forms[ id ].message = {};
+				state.cf7.forms[ id ].loading = false;
 
 				/**
 				 * Populate state with the errors, or thank-you message...

@@ -9,6 +9,10 @@ const Form = ( { state, actions, id, children, className, method } ) => {
 	const handleOnSubmit = ( event ) => {
 
 		event.preventDefault();
+
+		// Set the loading to true first.
+		state.cf7.forms[ id ].loading = true;
+
 		actions.cf7.sendForm( id );
 
 	};
@@ -18,11 +22,13 @@ const Form = ( { state, actions, id, children, className, method } ) => {
 			<FormElement method={ method } onSubmit={ handleOnSubmit } className={ className }>
 				{ children }
 			</FormElement>
+			{ state.cf7.forms[ id ].loading ? <Processing>Processing...</Processing> : '' }
 			<Message/>
 		</FormIdContext.Provider>
 	)
 };
 
 const FormElement = styled.form``;
+const Processing = styled.div``;
 
 export default connect( Form );
