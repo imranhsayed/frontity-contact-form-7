@@ -24,6 +24,8 @@ const Input = ( { state, actions, inputProps } ) => {
 	 * OnChange handler for input.
 	 *
 	 * @param {Object} event Event.
+	 *
+	 * @return {void}
 	 */
 	const onChange = ( event ) => {
 
