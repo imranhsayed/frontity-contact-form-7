@@ -7,8 +7,8 @@ const HiddenInputs = ({ state, actions, inputProps }) => {
 	const id = React.useContext(FormIdContext);
 	const inputName = inputProps.name;
 	const inputValue = inputProps.value;
-
-	actions.cf7.addHiddenInputs( { id, inputName, inputValue } );
+	
+	actions.cf7.addHiddenInputs({ id, inputName, value: inputValue } );
 
 	return (
 		<div>Hidden</div>
