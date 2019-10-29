@@ -1,5 +1,5 @@
 import React from 'react';
 
-const FormIdContext = React.createContext(null);
+const FormIdContext = React.createContext( null );
 
 export default FormIdContext;

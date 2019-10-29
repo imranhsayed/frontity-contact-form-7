@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
 const Input = ( { state, actions, inputProps } ) => {
 
-	const id          = React.useContext( FormIdContext );
+	const id          = useContext( FormIdContext );
 	const inputName   = inputProps.name;
 	const placeholder = inputProps.placeholder;
 

@@ -30,8 +30,8 @@ const MyForm = {
 			 */
 			initForm: ( { state } ) => ( id ) => {
 
-				if ( ! state.cf7.forms[id] ) {
-					state.cf7.forms[id] = { inputVals: {} };
+				if ( !state.cf7.forms[ id ] ) {
+					state.cf7.forms[ id ] = { inputVals: {} };
 				}
 			},
 
@@ -42,7 +42,7 @@ const MyForm = {
 			 * @return {Function}
 			 */
 			initInput: ( { state } ) => ( { id, inputName } ) => {
-					state.cf7.forms[id].inputVals = ( '' !== inputName ) ? { [inputName]: '' } : {};
+				state.cf7.forms[ id ].inputVals = ( '' !== inputName ) ? { [ inputName ]: '' } : {};
 			},
 
 			/**
@@ -54,7 +54,7 @@ const MyForm = {
 			 * @return {Function}
 			 */
 			changeInputValue: ( { state } ) => ( { id, inputName, value } ) => {
-				state.cf7.forms[id].inputVals[inputName] = value;
+				state.cf7.forms[ id ].inputVals[ inputName ] = value;
 			},
 
 			/**
@@ -64,7 +64,7 @@ const MyForm = {
 			 * @return {Function}
 			 */
 			addHiddenInputs: ( { state } ) => ( { id, inputName, value } ) => {
-				state.cf7.forms[id].inputVals[inputName] = value;
+				state.cf7.forms[ id ].inputVals[ inputName ] = value;
 			},
 
 			/**
@@ -75,25 +75,25 @@ const MyForm = {
 			 */
 			sendForm: ( { state } ) => async id => {
 
-				const myData = state.cf7.forms[id].inputVals;
+				const myData = state.cf7.forms[ id ].inputVals;
 
 				// Create new form data to send the post request with form data.
 				let formData = new FormData();
 
-				Object.keys( myData  ).forEach( ( key ) => { 
-					formData.append( key, myData[ key ] ) ;
-				});
+				Object.keys( myData ).forEach( ( key ) => {
+					formData.append( key, myData[ key ] );
+				} );
 
 				// CF7 REST API URL.
-				const url = `https://smitpatadiya.com/wp-json/contact-form-7/v1/contact-forms/${id}/feedback`;
+				const url = `https://smitpatadiya.com/wp-json/contact-form-7/v1/contact-forms/${ id }/feedback`;
 
 				// Post Request.
-				const res = await fetch( url, {
+				const res  = await fetch( url, {
 					method: 'POST',
 					body: formData
 				} );
 				const body = await res.json();
-				
+
 				state.cf7.forms[ id ].message = {};
 
 				/**

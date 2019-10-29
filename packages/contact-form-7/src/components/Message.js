@@ -2,9 +2,9 @@ import React from 'react';
 import { connect, styled } from "frontity";
 import FormIdContext from "./../context/FormIdContext";
 
-const Message = ({ state }) => {
+const Message = ( { state } ) => {
 
-	const id = React.useContext(FormIdContext);
+	const id           = React.useContext( FormIdContext );
 	const responseInfo = state.cf7.forms[ id ];
 
 	const getMessage = () => {
