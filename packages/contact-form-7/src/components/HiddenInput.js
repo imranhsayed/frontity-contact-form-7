@@ -2,6 +2,15 @@ import React from 'react';
 import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
+/**
+ * HiddenInputs component
+ *
+ * @param {Object} state Frontity state.
+ * @param {Object} actions Actions.
+ * @param {Object} inputProps Input props.
+ *
+ * @return {*}
+ */
 const HiddenInputs = ( { state, actions, inputProps } ) => {
 
 	const id         = React.useContext( FormIdContext );
@@ -13,6 +22,7 @@ const HiddenInputs = ( { state, actions, inputProps } ) => {
 	return (
 		<div>Hidden</div>
 	);
+	
 };
 
 export default connect( HiddenInputs );
