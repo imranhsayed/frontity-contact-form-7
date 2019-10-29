@@ -1,6 +1,6 @@
 # Frontity Contact Form 7 Project :art:
 
-:fire: Contact Form 7 extension for Frontity theme.
+:fire: Contact Form 7 extension for Frontity themes.
 
 # Installation :wrench:
 

@@ -2,6 +2,14 @@ import React, { useContext } from 'react';
 import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
+/**
+ * Input Component.
+ *
+ * @param {Object} state Frontity State.
+ * @param {Object} actions Actions methods.
+ * @param {Object} inputProps Input props.
+ * @return {*}
+ */
 const Input = ( { state, actions, inputProps } ) => {
 
 	const id          = useContext( FormIdContext );
@@ -12,13 +20,16 @@ const Input = ( { state, actions, inputProps } ) => {
 		actions.cf7.changeInputValue( { id, inputName, value: inputProps.value } );
 	}
 
+	/**
+	 * OnChange handler for input.
+	 *
+	 * @param {Object} event Event.
+	 */
 	const onChange = ( event ) => {
 
 		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );
 
 	};
-
-	console.warn( 'state', state.cf7.forms[ id ] );
 
 	return (
 		<input
