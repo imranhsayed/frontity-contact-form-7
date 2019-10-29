@@ -2,6 +2,15 @@ import React from 'react';
 import FormIdContext from "../context/FormIdContext";
 import { connect } from "frontity";
 
+/**
+ * Textarea Component.
+ *
+ * @param {Object} state Frontity state.
+ * @param {Object} actions Actions.
+ * @param {Object} inputProps Input props.
+ *
+ * @return {*}
+ */
 const Textarea = ( { state, actions, inputProps } ) => {
 
 	const id          = React.useContext( FormIdContext );
@@ -12,6 +21,11 @@ const Textarea = ( { state, actions, inputProps } ) => {
 		actions.cf7.changeInputValue( { id, inputName, value: inputProps.value } );
 	}
 
+	/**
+	 * Textarea onChange event handler.
+	 *
+	 * @param {Object} event Event.
+	 */
 	const onChange = ( event ) => {
 
 		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );

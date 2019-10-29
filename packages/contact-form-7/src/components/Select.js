@@ -47,7 +47,7 @@ const Select = ( { state, actions, inputProps } ) => {
 			) ) }
 		</select>
 	);
-	
+
 };
 
 export default connect( Select );
