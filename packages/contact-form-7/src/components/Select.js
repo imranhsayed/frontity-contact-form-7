@@ -12,8 +12,10 @@ const Select = ({ state, actions, inputProps }) => {
   }
 
   const inputVal = state.cf7.forms[id].inputVals[inputName];
+  console.warn( 'inputValSelect', inputVal );
 
 	const onChange = ( event ) => {
+		console.warn( 'selected', event.target.value );
     
     //[...event.target.options].filter(({ selected }) => selected).map(({ value }) => value)
 		actions.cf7.changeInputValue( { id, inputName, value: event.target.value } );
