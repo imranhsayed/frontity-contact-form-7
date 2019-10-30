@@ -27,28 +27,27 @@ const Message = ( { state } ) => {
 		if ( 'sent' === responseInfo.status ) {
 			return <SuccessMessage>{ responseInfo.message }</SuccessMessage>
 		} else if ( 'failed' === responseInfo.status ) {
-			return <ErrorMessage>{ responseInfo.validationErrors.email }</ErrorMessage>
+			return <ErrorMessage>{ responseInfo.validationErrors }</ErrorMessage>
 		} else {
 			return '';
 		}
 
 	};
+	
+	console.warn( 'result state', state );
 
 	return getMessage();
 
 };
 
 const SuccessMessage = styled.div`
-	color: #215f0c;
     background-color: #d9f0d1;
-    border-color: #c9ebbe;
+    border: 2px solid #398f14;
     padding: 0.75rem 1.25rem;
 `;
 
 const ErrorMessage = styled.div`
-	color: #ff2c18;
-    background-color: #ffccd7;
-    border-color: #ffb8c8;
+    border: 2px solid #ff2c18;
     padding: 0.75rem 1.25rem;
 `;
 

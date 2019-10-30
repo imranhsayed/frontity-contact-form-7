@@ -94,10 +94,16 @@ const MyForm = {
 					body: formData
 				} );
 				const body = await res.json();
+				let invalidFieldsObj = {};
 
 				// Clear previous message.
 				state.cf7.forms[ id ].message = {};
 				state.cf7.forms[ id ].loading = false;
+
+				// Clear previous errors if any
+				if ( state.cf7.forms[ id ].invalidFields ) {
+					state.cf7.forms[ id ].invalidFields = {};
+				}
 
 				/**
 				 * Populate state with the errors, or thank-you message...
@@ -112,27 +118,25 @@ const MyForm = {
 
 				} else if ( 'validation_failed' === body.status ) {
 
-					
-					let invalidFieldsObj = {};
-					
+
 					body.invalidFields.forEach( item => {
-						
+
 						let errorKey = item.into.replace('span.wpcf7-form-control-wrap.','');
-						invalidFieldsObj[errorKey] = item.message;
-						
+						if ( errorKey ) {
+							invalidFieldsObj[errorKey] = item.message;
+						}
+
 					} );
 
 					state.cf7.forms[ id ].invalidFields = invalidFieldsObj;
-					
+
 					state.cf7.forms[ id ].status = "failed";
 
 					/**
 					 * Populate errors from the response so React components
 					 * can see them and re-render appropriately
 					 */
-					state.cf7.forms[ id ].validationErrors = {
-						email: "Please enter the required fields correctly"
-					};
+					state.cf7.forms[ id ].validationErrors = body.message;
 
 				}
 			}
