@@ -4,6 +4,7 @@ import cf7Inputs from "./processors/cf7Inputs";
 import cf7Textarea from "./processors/cf7Textarea";
 import cf7HiddenInputs from "./processors/cf7HiddenInputs";
 import cf7Select from "./processors/cf7Select";
+import cf7Span from "./processors/cf7Span";
 
 const MyForm = {
 
@@ -15,7 +16,7 @@ const MyForm = {
 
 	libraries: {
 		html2react: {
-			processors: [cf7Form, cf7Inputs, cf7HiddenInputs, cf7Textarea, cf7Select]
+			processors: [cf7Form, cf7Span, cf7Inputs, cf7HiddenInputs, cf7Textarea, cf7Select]
 		}
 	},
 
@@ -111,6 +112,18 @@ const MyForm = {
 
 				} else if ( 'validation_failed' === body.status ) {
 
+					
+					let invalidFieldsObj = {};
+					
+					body.invalidFields.forEach( item => {
+						
+						let errorKey = item.into.replace('span.wpcf7-form-control-wrap.','');
+						invalidFieldsObj[errorKey] = item.message;
+						
+					} );
+
+					state.cf7.forms[ id ].invalidFields = invalidFieldsObj;
+					
 					state.cf7.forms[ id ].status = "failed";
 
 					/**
