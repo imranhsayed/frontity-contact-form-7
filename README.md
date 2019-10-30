@@ -2,7 +2,7 @@
 
 :fire: Contact Form 7 extension for Frontity theme.
 
-******* PLEASE STAR MY REPO TO SUPPORT MY WORK 🙏 ******
+******* PLEASE STAR MY REPO TO SUPPORT OUR WORK 🙏 ******
 
 Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
 
