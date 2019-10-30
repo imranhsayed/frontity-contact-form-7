@@ -33,15 +33,12 @@ const Message = ( { state } ) => {
 		}
 
 	};
-	
-	console.warn( 'result state', state );
 
 	return getMessage();
 
 };
 
 const SuccessMessage = styled.div`
-    background-color: #d9f0d1;
     border: 2px solid #398f14;
     padding: 0.75rem 1.25rem;
 `;
