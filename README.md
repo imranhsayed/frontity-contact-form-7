@@ -87,7 +87,7 @@ This is the beta version. Some features will be added in the final release, like
 
 - Build with love :blue_heart:, using [Frontity's](https://frontity.org)
 
-## Author
+## Authors
 
 1. [Imran Sayed](https://twitter.com/imranhsayed)
 2. [Smit Patadiya](https://twitter.com/smit_patadiya)
