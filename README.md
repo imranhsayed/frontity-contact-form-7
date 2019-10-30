@@ -1,38 +1,32 @@
 # Frontity Contact Form 7 Project :art:
 
-:fire: Contact Form 7 extension for Frontity themes.
-
-# How does it work?
-
-> You need to create a page in your WordPress site ( if you don't already have one ) that contains the CF7 shortcode.
-Then use put that page name in the `frontity-settings.js` as explained below. The Frontity page will automatically render all the CF7
-forms that are present on that page.
-Once the form is submitted the email goes to the admin ( if CF7 email settings are configured on your WordPress site  )
-
-> It uses html processors to render the CF7 form.
-
-# Features
-1. All CF7 forms on the page will display
-2. You can also use it for multiple pages.
-3. Fast
+:fire: Contact Form 7 extension for Frontity theme.
 
 # Installation :wrench:
 
-## 1. For new/existing project using npm
+### 1. For new project: by cloning this project.
+
+1. `git clone https://github.com/imranhsayed/frontity-contact-form-7`
+2. `cd frontity-contact-form-7`
+3. `npm install && npx frontity dev` ( from the project's root directory )
+ 
+4. Your site will now be available at `http://localhost:3000/`
+
+## 2. For new/existing project using npm
+
+> Please follow step 1 to 5 for new project and 2 to 5 for existing project.
 
 1. `npx frontity create my-app && cd my-app`
-2. `cd packages`
-2. `npm install contact-form-7`
-3. Add `"contact-form-7"` to the packages array in `frontity-settings.js` and also put your theme name under `name`
+2. `npm install frontity-contact-form-7` ( in the root of your project )
+3. In the `frontity-settings.js`
+a. Add the package name
 ```ruby
   "packages": [
     {
-    "name": "@frontity/mars-theme",
-      "contact-form-7",
+      "frontity-contact-form-7",
 ```
-4. Add the WordPress page name which has the CF7 shortcode. 
+b. Add Contact form 7 page name and slug as what you have on your WordPress site. For example
 ```ruby
-      "state": {
         "theme": {
           "menu": [
             [
@@ -40,18 +34,25 @@ Once the form is submitted the email goes to the admin ( if CF7 email settings a
               "/cf7"
             ],
 ```
-5. `npx frontity dev` ( from project's root directory )
-6. Your site will be available at `http://localhost:3000/`
+c. Update your WordPress API URI if not added already.
+ ```ruby
+      "state": {
+        "source": {
+          "api": "https://your-wordpress-site.com/wp-json"
+        }
+ ```
+4. `npx frontity dev` ( from project's root directory )
+5. Your site will be available at `http://localhost:3000/`
 
 ## More info :clipboard:
 
-This is the beta version.
-It has the support for the CF7 fields that show in the default CF7 shortcode and some others like: 
-1. name
-2. email
-3. subject message
+This is the beta version. Some features will be added in the final release, like:
 
-Support for other fields will be added in the final release.
+1. More button smaller screens.
+
+## Common Commands :computer:
+
+- `npx frontity dev` ( inside project's root ) Runs server in development mode ( from the root of your project )
 
 ## Credits :white_flower:
 

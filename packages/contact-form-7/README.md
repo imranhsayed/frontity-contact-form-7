@@ -14,14 +14,33 @@
 
 ## 2. For new/existing project using npm
 
+> Please follow step 1 to 5 for new project and 2 to 5 for existing project.
+
 1. `npx frontity create my-app && cd my-app`
-2. `npm install frontity-contact-form-7`
-3. Update the package name to the `frontity-settings.js`
+2. `npm install frontity-contact-form-7` ( in the root of your project )
+3. In the `frontity-settings.js`
+a. Add the package name
 ```ruby
   "packages": [
     {
-      "name": "frontity-contact-form-7",
+      "frontity-contact-form-7",
 ```
+b. Add Contact form 7 page name and slug as what you have on your WordPress site. For example
+```ruby
+        "theme": {
+          "menu": [
+            [
+              "Contact Form 7",
+              "/cf7"
+            ],
+```
+c. Update your WordPress API URI if not added already.
+ ```ruby
+      "state": {
+        "source": {
+          "api": "https://your-wordpress-site.com/wp-json"
+        }
+ ```
 4. `npx frontity dev` ( from project's root directory )
 5. Your site will be available at `http://localhost:3000/`
 
