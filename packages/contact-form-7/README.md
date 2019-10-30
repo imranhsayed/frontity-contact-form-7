@@ -15,12 +15,12 @@
 ## 2. For new/existing project using npm
 
 1. `npx frontity create my-app && cd my-app`
-2. `npm install @frontity/contact-form-7-theme`
+2. `npm install frontity-contact-form-7`
 3. Update the package name to the `frontity-settings.js`
 ```ruby
   "packages": [
     {
-      "name": "@frontity/contact-form-7",
+      "name": "frontity-contact-form-7",
 ```
 4. `npx frontity dev` ( from project's root directory )
 5. Your site will be available at `http://localhost:3000/`
