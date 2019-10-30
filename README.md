@@ -7,14 +7,14 @@
 Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
 
 
-#Demo CF7 Form :video_camera
-[](demo.gif)
+# :video_camera: Demo CF7 Form
+![](demo.gif)
 
-#Demo CF7 Form Email received :video_camera
-[](email-sent.gif)
+# :video_camera: Demo CF7 Form Email received
+![](email-sent.gif)
 
 #### Below is the screentshot taken with Frontity mars theme with some added styles. The styles may look different for your Frontity theme. 
-[](demo-pic.png)
+![](demo-pic.png)
 
 # How does it work?
 
