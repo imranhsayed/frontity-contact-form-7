@@ -1,6 +1,35 @@
-# Frontity Contact Form 7 Project :art:
+# Frontity Contact Form 7 :art:
 
 :fire: Contact Form 7 extension for Frontity theme.
+
+******* PLEASE STAR MY REPO TO SUPPORT MY WORK 🙏 ******
+
+Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
+
+
+#Demo CF7 Form :video_camera
+[](demo.gif)
+
+#Demo CF7 Form Email received :video_camera
+[](email-sent.gif)
+
+#### Below is the screentshot taken with Frontity mars theme with some added styles. The styles may look different for your Frontity theme. 
+[](demo-pic.png)
+
+# How does it work?
+
+> You need to create a page in your WordPress site ( if you don't already have one ) that contains the CF7 shortcode.
+Install the package as shown in the Installation steps below.
+>Then put that WordPress page name, the slug and the package name in the `frontity-settings.js` as explained below. The Frontity page will automatically render all the CF7
+forms that are present on that page including the content of the page.
+On successful form submission, the email goes to the admin ( if CF7 email settings are configured on your WordPress site  ). Errors are shown as well if the fields are invalid.
+
+> It uses html processors to render the CF7 form.
+
+# Features
+1. All CF7 forms on the page will display
+2. You can also use it for multiple pages.
+3. Built with React Frontity in React, so its fast and performant.
 
 # Installation :wrench:
 
