@@ -80,7 +80,7 @@ You can change the `state.source.api` setting on the `frontity.settings.js` file
 
 ## Contributors
 
-1. [Luis Herranz](https://twitter.com/luisherranz) - Lead Developer [@frontity](https://twitter.com/frontity)
+1. [Luis Herranz](https://twitter.com/luisherranz) - Leed Developer [@frontity](https://twitter.com/frontity)
 
 ## License :scroll:
 

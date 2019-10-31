@@ -76,7 +76,7 @@ This is the beta version. Some features will be added in the final release, like
 
 ## Contributors
 
-1. [Luis Herranz](https://twitter.com/luisherranz) - Lead Developer [@frontity](https://twitter.com/frontity)
+1. [Luis Herranz](https://twitter.com/luisherranz) - Leed Developer [@frontity](https://twitter.com/frontity)
 
 ## License :scroll:
 
