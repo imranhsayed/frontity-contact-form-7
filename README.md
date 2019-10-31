@@ -50,12 +50,6 @@ Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
 
 That's it! The package doesn't need any settings. You should be able to see the form in any page or post that contains one.
 
-## More info :clipboard:
-
-This is the beta version. Some features will be added in the final release, like:
-
-1. [Support for all the fields](https://github.com/imranhsayed/frontity-contact-form-7/issues/8).
-
 ## Contribute to the package
 
 If you want to contribute to the package, you can do so following these simple steps:
@@ -68,6 +62,12 @@ If you want to contribute to the package, you can do so following these simple s
 1. Submit the pull request! :)
 
 You can change the `state.source.api` setting on the `frontity.settings.js` file to point the project to your own WordPress if you want but please do not include those changes in your PR.
+
+## More info :clipboard:
+
+This is the beta version. Some features will be added in the final release, like:
+
+1. [Support for all the fields](https://github.com/imranhsayed/frontity-contact-form-7/issues/8).
 
 ## Credits :white_flower:
 
