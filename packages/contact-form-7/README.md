@@ -78,6 +78,10 @@ You can change the `state.source.api` setting on the `frontity.settings.js` file
 1. [Imran Sayed](https://twitter.com/imranhsayed)
 2. [Smit Patadiya](https://twitter.com/smit_patadiya)
 
+## Contributors
+
+1. [Luis Herranz](https://twitter.com/luisherranz) - Lead Developer [@frontity](https://twitter.com/frontity)
+
 ## License :scroll:
 
 ![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)
