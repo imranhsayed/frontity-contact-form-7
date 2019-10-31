@@ -3,8 +3,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://test.frontity.io",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "title": "Frontity Contact Form 7",
+      "description": "Introducing Contact Form 7 package for Frontity"
     }
   },
   "packages": [
@@ -19,7 +19,7 @@ const settings = {
             ],
             [
               "Contact Form 7",
-              "/cf7"
+              "contact-form-7"
             ],
             [
               "Travel",
@@ -45,7 +45,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://smitpatadiya.com/wp-json"
+          "api": "https://codeytek.com/wp-json"
         }
       }
     },
