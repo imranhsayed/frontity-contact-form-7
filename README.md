@@ -2,20 +2,18 @@
 
 :fire: Contact Form 7 extension for Frontity theme.
 
-**\*\*\*** PLEASE STAR MY REPO TO SUPPORT OUR WORK 🙏 **\*\***
+******* PLEASE STAR MY REPO TO SUPPORT OUR WORK 🙏 ******
 
 Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
 
-# :video_camera: Demo CF7 Form
 
+# :video_camera: Demo CF7 Form
 ![](demo.gif)
 
 # :video_camera: Demo CF7 Form Email received
-
 ![](email-sent.gif)
 
-#### Below is the screentshot taken with Frontity mars theme with some added styles. The styles may look different for your Frontity theme.
-
+#### Below is the screentshot taken with Frontity mars theme with some added styles. The styles may look different for your Frontity theme. 
 ![](demo-pic.png)
 
 # How does it work?
@@ -36,7 +34,17 @@ Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
 
 # Installation :wrench:
 
-1. Do `npm install frontity-contact-form-7` in the root of your project.
+### 1. By cloning this project.
+
+1. `git clone https://github.com/imranhsayed/frontity-contact-form-7`
+2. `cd frontity-contact-form-7`
+3. `npm install && npx frontity dev` ( from the project's root directory )
+ 
+4. Your site will now be available at `http://localhost:3000/`
+
+## 2. For existing project using npm
+
+1. Do `npm install frontity-contact-form-7` in the root of your existing project.
 1. Add the package name in `frontity-settings.js`.
 
 ```javascript
@@ -50,18 +58,6 @@ Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
 
 That's it! The package doesn't need any settings. You should be able to see the form in any page or post that contains one.
 
-## Contribute to the package
-
-If you want to contribute to the package, you can do so following these simple steps:
-
-1. Fork this repository (https://github.com/imranhsayed/frontity-contact-form-7).
-1. Clone it in your local machine.
-1. Run `npm install`.
-1. Run `npx frontity dev`.
-1. Do the changes to the code.
-1. Submit the pull request! :)
-
-You can change the `state.source.api` setting on the `frontity.settings.js` file to point the project to your own WordPress if you want but please do not include those changes in your PR.
 
 ## More info :clipboard:
 
@@ -77,6 +73,10 @@ This is the beta version. Some features will be added in the final release, like
 
 1. [Imran Sayed](https://twitter.com/imranhsayed)
 2. [Smit Patadiya](https://twitter.com/smit_patadiya)
+
+## Contributors
+
+1. [Luis Herranz](https://twitter.com/luisherranz) - Lead Developer [@frontity](https://twitter.com/frontity)
 
 ## License :scroll:
 
