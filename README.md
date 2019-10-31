@@ -33,17 +33,7 @@ Please follow me 🙏 on [twitter](https://twitter.com/imranhsayed) and github
 
 # Installation :wrench:
 
-### 1. By cloning this project.
-
-1. `git clone https://github.com/imranhsayed/frontity-contact-form-7`
-2. `cd frontity-contact-form-7`
-3. `npm install && npx frontity dev` ( from the project's root directory )
- 
-4. Your site will now be available at `http://localhost:3000/`
-
-## 2. For existing project using npm
-
-1. Do `npm install frontity-contact-form-7` in the root of your existing project.
+1. Do `npm install frontity-contact-form-7` in the root of your project.
 1. Add the package name in `frontity-settings.js`.
 
 ```javascript
