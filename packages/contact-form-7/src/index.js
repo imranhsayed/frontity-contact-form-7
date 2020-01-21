@@ -116,19 +116,20 @@ const MyForm = {
 					// Once the email is sent, clear the form fields.
 					state.cf7.forms[ id ].inputVals = {};
 
-				} else if ( 'validation_failed' === body.status ) {
+				} else if ( 'validation_failed' === body.status || 'mail_failed' === body.status ) {
 
+					if(body.invalidFields){
+						body.invalidFields.forEach( item => {
 
-					body.invalidFields.forEach( item => {
+							let errorKey = item.into.replace('span.wpcf7-form-control-wrap.','');
+							if ( errorKey ) {
+								invalidFieldsObj[errorKey] = item.message;
+							}
 
-						let errorKey = item.into.replace('span.wpcf7-form-control-wrap.','');
-						if ( errorKey ) {
-							invalidFieldsObj[errorKey] = item.message;
-						}
+						} );
 
-					} );
-
-					state.cf7.forms[ id ].invalidFields = invalidFieldsObj;
+						state.cf7.forms[ id ].invalidFields = invalidFieldsObj;
+					}
 
 					state.cf7.forms[ id ].status = "failed";
 
@@ -139,6 +140,7 @@ const MyForm = {
 					state.cf7.forms[ id ].validationErrors = body.message;
 
 				}
+
 			}
 		}
 	}
