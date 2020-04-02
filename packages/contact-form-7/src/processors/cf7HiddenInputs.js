@@ -4,7 +4,7 @@ import HiddenInput from '../components/HiddenInput';
 const cf7HiddenInputs = {
 	name: "cf7HiddenInputs",
 	test: node => node.component === "input" && /hidden/.test( node.props.type ),
-	process: node => {
+	processor: node => {
 
 		const name  = ( 'undefined' === typeof ( node.props.name ) ) ? '' : node.props.name;
 		const value = ( 'undefined' === typeof ( node.props.value ) ) ? '' : node.props.value;
