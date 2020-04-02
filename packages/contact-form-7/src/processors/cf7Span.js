@@ -4,7 +4,7 @@ import Span from '../components/Span';
 const cf7Span = {
 	name: "cf7Span",
 	test: node => node.component === "span" && /wpcf7-form-control-wrap/.test( node.props.className ),
-	process: node => {
+	processor: node => {
 
 		let spanKey = '';
 
