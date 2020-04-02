@@ -6,7 +6,7 @@ const cf7Form = {
 
 		node.component === "form" && node.props.className === "wpcf7-form",
 
-	process: node => {
+	processor: node => {
 
 		node.props.id  = node.children[ 0 ].children[ 0 ].props.value;
 		node.component = Form;
