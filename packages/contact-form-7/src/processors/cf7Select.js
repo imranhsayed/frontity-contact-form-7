@@ -4,7 +4,7 @@ const cf7Select = {
 
 	name: "cf7Select",
 	test: node => node.component === "select" && /wpcf7-form-control/.test( node.props.className ),
-	process: node => {
+	processor: node => {
 
 		const ariaInvalid     = ( 'undefined' === typeof ( node.props[ 'aria-invalid' ] ) ) ? '' : node.props[ 'aria-invalid' ];
 		const className       = ( 'undefined' === typeof ( node.props.className ) ) ? '' : node.props.className;
