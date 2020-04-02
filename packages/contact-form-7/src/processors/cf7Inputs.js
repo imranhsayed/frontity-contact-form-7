@@ -4,7 +4,7 @@ const cf7Inputs = {
 
 	name: "cf7Inputs",
 	test: node => node.component === "input" && /wpcf7-form-control/.test( node.props.className ),
-	process: node => {
+	processor: node => {
 
 		const ariaInvalid  = ( 'undefined' === typeof ( node.props[ 'aria-invalid' ] ) ) ? '' : node.props[ 'aria-invalid' ];
 		const ariaRequired = ( 'undefined' === typeof ( node.props[ 'aria-required' ] ) ) ? '' : node.props[ 'aria-required' ];
