@@ -3,8 +3,8 @@ import Textarea from '../components/Textarea';
 const cf7Textarea = {
 
 	name: "cf7Textarea",
-	test: node => node.component === "textarea" && /wpcf7-form-control/.test( node.props.className ),
-	processor: node => {
+	test: ({ node }) => node.component === "textarea" && /wpcf7-form-control/.test( node.props.className ),
+	processor: ({ node }) => {
 
 		const ariaInvalid  = ( 'undefined' === typeof ( node.props[ 'aria-invalid' ] ) ) ? '' : node.props[ 'aria-invalid' ];
 		const ariaRequired = ( 'undefined' === typeof ( node.props[ 'aria-required' ] ) ) ? '' : node.props[ 'aria-required' ];
