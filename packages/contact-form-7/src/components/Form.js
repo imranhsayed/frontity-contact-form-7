@@ -39,8 +39,7 @@ const Form = ( { state, actions, id, children, className, method } ) => {
 			<FormElement method={ method } onSubmit={ handleOnSubmit } className={ className }>
 				{ children }
 			</FormElement>
-			{ state.cf7.forms[ id ].loading ? <Processing>Processing...</Processing> : '' }
-			<Message/>
+			{ state.cf7.forms[ id ].loading ? <Processing>Processing...</Processing> : <Message/> }
 		</FormIdContext.Provider>
 	)
 };
