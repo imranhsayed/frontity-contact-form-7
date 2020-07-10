@@ -4,7 +4,7 @@ const cf7Form = {
 	name: "cf7Form",
 	test: ({ node }) =>
 
-		node.component === "form" && node.props.className === "wpcf7-form",
+		node.component === "form" && /wpcf7-form/.test( node.props.className ),
 
 	processor: ({ node }) => {
 
