@@ -118,8 +118,8 @@ const MyForm = {
 
 				} else if ( 'validation_failed' === body.status || 'mail_failed' === body.status ) {
 
-					if(body.invalidFields){
-						body.invalidFields.forEach( item => {
+					if(body.invalid_fields){
+						body.invalid_fields.forEach( item => {
 
 							let errorKey = item.into.replace('span.wpcf7-form-control-wrap.','');
 							if ( errorKey ) {
