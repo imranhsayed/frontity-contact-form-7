@@ -1,5 +1,7 @@
 # Frontity Contact Form 7 :art:
 
+[![Download counter](https://img.shields.io/npm/dt/frontity-contact-form-7.svg)](https://www.npmjs.com/package/frontity-contact-form-7.svg)
+
 :fire: Contact Form 7 package for Frontity.
 
 ******* PLEASE STAR MY REPO TO SUPPORT OUR WORK 🙏 ******
