@@ -1,5 +1,9 @@
 # Frontity Contact Form 7 :art:
 
+[![Project Status: Active.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+![Stars](https://img.shields.io/github/stars/imranhsayed/frontity-contact-form-7?label=%E2%AD%90%20Stars)
+![Forks](https://img.shields.io/github/forks/imranhsayed/frontity-contact-form-7?color=%23ff69b4)
+![Contributors](https://img.shields.io/github/contributors/imranhsayed/frontity-contact-form-7?color=blue)
 [![Download counter](https://img.shields.io/npm/dt/frontity-contact-form-7.svg)](https://www.npmjs.com/package/frontity-contact-form-7.svg)
 
 :fire: Contact Form 7 package for Frontity.
