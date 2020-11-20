@@ -18,11 +18,11 @@ const Input = ( { state, actions, inputProps } ) => {
   const placeholder = inputProps.placeholder;
 
   useEffect(() => {
-    actions.cf7.changeInputValue( { id, inputName, value: 'no'} );
+    actions.cf7.changeInputValue( { id, inputName, value: ''} );
   }, [])
 
 	if ( 'undefined' === typeof ( state.cf7.forms[ id ].inputVals[ inputName ] ) ) {
-		actions.cf7.changeInputValue( { id, inputName, value: inputProps.value } );
+		actions.cf7.changeInputValue( { id, inputName, value: '' } );
 	}
 
 	/**
@@ -36,7 +36,7 @@ const Input = ( { state, actions, inputProps } ) => {
     if(event.target.checked) {
       actions.cf7.changeInputValue( { id, inputName, value: 'yes' } );
     } else {
-      actions.cf7.changeInputValue( { id, inputName, value: 'no' } );
+      actions.cf7.changeInputValue( { id, inputName, value: '' } );
     }
 	};
 
