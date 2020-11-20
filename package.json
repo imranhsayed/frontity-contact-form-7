@@ -5,15 +5,15 @@
   "main": "src/index.js",
   "homepage": "https://codeytek.com",
   "keywords": [
-	"Frontity",
-	"Contact",
-	"form",
-	"7",
-	"cf7",
-	"WordPress",
-	"Reactjs",
-	"react",
-	"frontity-cf7"
+    "Frontity",
+    "Contact",
+    "form",
+    "7",
+    "cf7",
+    "WordPress",
+    "Reactjs",
+    "react",
+    "frontity-cf7"
   ],
   "scripts": {
     "dev": "frontity dev",
@@ -22,12 +22,12 @@
   },
   "prettier": {},
   "dependencies": {
-    "@frontity/core": "^1.2.1",
-    "@frontity/html2react": "^1.1.11",
-    "@frontity/mars-theme": "^1.2.0",
-    "@frontity/tiny-router": "^1.0.14",
-    "@frontity/wp-source": "^1.3.1",
-    "frontity": "^1.3.1",
+    "@frontity/core": "^1.9.1",
+    "@frontity/html2react": "^1.5.0",
+    "@frontity/mars-theme": "^1.4.4",
+    "@frontity/tiny-router": "^1.2.3",
+    "@frontity/wp-source": "^1.10.0",
+    "frontity": "^1.13.0",
     "contact-form-7": "./packages/contact-form-7"
   }
 }
